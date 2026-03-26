@@ -75,6 +75,7 @@
   align-items: center;
   overflow: hidden;
   padding-top: 72px;
+  padding-bottom: 48px;
 }
 
 .heroBg {
@@ -446,12 +447,11 @@
 }
 
 .aboutImg {
+  position: relative;
   width: 100%;
   height: 380px;
-  object-fit: cover;
   border-radius: 24px;
-  background: url("https://images.unsplash.com/photo-1588776814546-1ffbb83cbbf4?w=700&q=80")
-    center / cover no-repeat;
+  overflow: hidden;
   border: 1px solid var(--border);
 }
 
@@ -662,10 +662,21 @@
 @media (max-width: 900px) {
   .heroContent {
     grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 
   .heroRight {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .toothWrapper {
+    width: min(360px, 90vw);
+    height: min(420px, 90vw);
   }
 
   .aboutSection {
@@ -680,6 +691,50 @@
 @media (max-width: 640px) {
   .navList {
     display: none;
+  }
+
+  /* ── Logo ── */
+  .logo {
+    font-size: 1rem;
+    gap: 8px;
+  }
+
+  .logoIcon {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 8px;
+  }
+
+  /* ── Search bar ── */
+  .searchWrap {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .searchIcon {
+    display: none;
+  }
+
+  .searchInput {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 4px 0;
+  }
+
+  .searchBtn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+  }
+
+  /* ── Tooth canvas ── */
+  .toothWrapper {
+    width: min(280px, 84vw);
+    height: min(320px, 84vw);
   }
 
   .heroStats {

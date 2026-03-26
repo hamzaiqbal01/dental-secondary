@@ -1,7 +1,8 @@
+import Image from "next/image";
 import styles from "./landing-page.module.css";
 import { ToothCanvas } from "./tooth-canvas";
-
-const navItems = ["Home", "Secondary Database", "Application Services", "Other Resources"];
+import { Navbar } from "@/shared/components/layout/navbar";
+import { HeroSearch } from "./hero-search";
 
 const serviceCards = [
   {
@@ -42,26 +43,7 @@ const stats = [
 export function LandingPage() {
   return (
     <div className={styles.page}>
-      <nav className={styles.nav}>
-        <div className={styles.logo}>
-          <div className={styles.logoIcon}>🦷</div>
-          Dental School Secondary
-        </div>
-        <ul className={styles.navList}>
-          {navItems.map((item) => (
-            <li key={item}>
-              <a className={styles.navLink} href="#">
-                {item}
-              </a>
-            </li>
-          ))}
-          <li>
-            <a className={`${styles.navLink} ${styles.navCta}`} href="#contact">
-              Contact Us
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <Navbar />
 
       <section className={styles.hero}>
         <div className={styles.heroBg} />
@@ -83,13 +65,7 @@ export function LandingPage() {
               Expert guidance, comprehensive secondary databases, and tailored application services - everything you need
               to navigate dental school admissions with confidence.
             </p>
-            <div className={styles.searchWrap}>
-              <div className={styles.searchIcon}>📍</div>
-              <input className={styles.searchInput} type="text" placeholder="Search by state, school, or program..." />
-              <button className={styles.searchBtn} type="button">
-                Search Schools
-              </button>
-            </div>
+            <HeroSearch />
             <div className={styles.heroStats}>
               {stats.map((stat) => (
                 <div key={stat.label}>
@@ -149,7 +125,16 @@ export function LandingPage() {
 
       <section className={styles.aboutSection}>
         <div className={styles.aboutVisual}>
-          <div className={styles.aboutImg} />
+          <div className={styles.aboutImg}>
+            <Image
+              src="/dentisdt-image.png"
+              alt="Dentist at work"
+              fill
+              sizes="(max-width: 900px) 100vw, 50vw"
+              style={{ objectFit: "cover", objectPosition: "center" }}
+              priority
+            />
+          </div>
           <div className={styles.aboutBadge}>
             <strong>2022</strong>
             <span>Est. Trusted Resource</span>
