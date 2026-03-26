@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #0a1628;
+  --deep: #0d1f3c;
+  --teal: #00bfa5;
+  --teal-light: #00e5c9;
+  --gold: #c9a84c;
+  --white: #ffffff;
+  --off-white: #f0f4f8;
+  --muted: #8a9bb5;
+  --card-bg: #111f38;
+  --border: rgba(0, 191, 165, 0.18);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+}
+

@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dental School Secondary</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1628;
+    --deep: #0d1f3c;
+    --teal: #00bfa5;
+    --teal-light: #00e5c9;
+    --gold: #c9a84c;
+    --white: #ffffff;
+    --off-white: #f0f4f8;
+    --muted: #8a9bb5;
+    --card-bg: #111f38;
+    --border: rgba(0,191,165,0.18);
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 0 8%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px;
+    background: rgba(10,22,40,0.85);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    display: flex; align-items: center; gap: 10px;
+  }
+
+  .logo-icon {
+    width: 36px; height: 36px;
+    background: linear-gradient(135deg, var(--teal), var(--teal-light));
+    border-radius: 10px;
+    display: grid; place-items: center;
+    font-size: 18px;
+  }
+
+  nav ul {
+    display: flex; gap: 36px; list-style: none;
+  }
+
+  nav ul a {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+
+  nav ul a:hover { color: var(--teal); }
+
+  .nav-cta {
+    background: linear-gradient(135deg, var(--teal), var(--teal-light));
+    color: var(--navy) !important;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600 !important;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 72px;
+  }
+
+  /* Dental background image via CSS */
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      url('https://images.unsplash.com/photo-1606811842218-e7b6f2eb42f9?w=1600&q=80') center/cover no-repeat;
+    filter: brightness(0.25) saturate(0.6);
+    transform: scale(1.04);
+    animation: zoomBg 18s ease-in-out infinite alternate;
+  }
+
+  @keyframes zoomBg { to { transform: scale(1.12); } }
+
+  /* Dark gradient overlay — deeper on left, lighter on right */
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(
+      105deg,
+      rgba(10,22,40,0.97) 0%,
+      rgba(10,22,40,0.88) 45%,
+      rgba(10,22,40,0.4) 70%,
+      rgba(10,22,40,0.15) 100%
+    );
+  }
+
+  /* Teal glow blob */
+  .hero-glow {
+    position: absolute;
+    width: 560px; height: 560px;
+    background: radial-gradient(circle, rgba(0,191,165,0.18) 0%, transparent 70%);
+    top: 50%; left: 5%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative; z-index: 2;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 0 8%;
+    gap: 60px;
+  }
+
+  .hero-left { max-width: 580px; }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(0,191,165,0.12);
+    border: 1px solid rgba(0,191,165,0.3);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--teal-light);
+    margin-bottom: 28px;
+  }
+
+  .hero-badge span { font-size: 10px; }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    font-weight: 900;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    margin-bottom: 22px;
+    color: var(--white);
+  }
+
+  h1 em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--teal), var(--teal-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+
+  /* Search bar */
+  .search-wrap {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 6px 6px 6px 20px;
+    display: flex; align-items: center; gap: 12px;
+    backdrop-filter: blur(12px);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    margin-bottom: 32px;
+  }
+
+  .search-wrap:focus-within {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 4px rgba(0,191,165,0.1);
+  }
+
+  .search-icon { color: var(--teal); font-size: 18px; flex-shrink: 0; }
+
+  .search-wrap input {
+    flex: 1;
+    background: none; border: none; outline: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--white);
+    placeholder-color: var(--muted);
+  }
+
+  .search-wrap input::placeholder { color: var(--muted); }
+
+  .search-btn {
+    background: linear-gradient(135deg, var(--teal), var(--teal-light));
+    color: var(--navy);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .search-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+  .hero-stats {
+    display: flex; gap: 36px;
+  }
+
+  .stat { }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--teal-light);
+  }
+  .stat-label { font-size: 0.78rem; color: var(--muted); font-weight: 400; margin-top: 2px; }
+
+  /* 3D Tooth section (right side) */
+  .hero-right {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tooth-wrapper {
+    position: relative;
+    width: 460px;
+    height: 540px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #toothCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  /* outer glow ring */
+  .tooth-glow-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 55%, rgba(0,191,165,0.13) 0%, transparent 68%);
+    pointer-events: none;
+  }
+
+  /* Floating card 1 */
+  .float-card {
+    position: absolute;
+    background: rgba(10,22,40,0.92);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px 18px;
+    backdrop-filter: blur(16px);
+    animation: floatCard 5s ease-in-out infinite;
+    z-index: 10;
+  }
+
+  .float-card.card1 { top: 60px; left: -10px; animation-delay: 0s; }
+  .float-card.card2 { bottom: 100px; right: -20px; animation-delay: 2s; }
+
+  @keyframes floatCard {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .card-label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .card-val { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--teal-light); margin-top: 2px; }
+  .card-icon { font-size: 22px; margin-bottom: 6px; }
+
+  /* ─── SERVICES ─── */
+  .section {
+    padding: 100px 8%;
+  }
+
+  .section-label {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--teal);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block; width: 28px; height: 2px;
+    background: var(--teal);
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .section-sub {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 520px;
+    margin-bottom: 56px;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 36px 32px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    cursor: pointer;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(0,191,165,0.3);
+    border-color: rgba(0,191,165,0.35);
+  }
+
+  .card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--teal), var(--teal-light));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .card:hover::before { opacity: 1; }
+
+  .card-emoji { font-size: 2.2rem; margin-bottom: 20px; display: block; }
+
+  .card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .card p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .card-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--teal);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: gap 0.2s;
+  }
+
+  .card-link:hover { gap: 14px; }
+
+  /* ─── ABOUT ─── */
+  .about-section {
+    padding: 80px 8%;
+    background: linear-gradient(135deg, rgba(0,191,165,0.05) 0%, transparent 60%);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about-visual {
+    position: relative;
+  }
+
+  .about-img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 24px;
+    background: url('https://images.unsplash.com/photo-1588776814546-1ffbb83cbbf4?w=700&q=80') center/cover no-repeat;
+    border: 1px solid var(--border);
+  }
+
+  .about-badge {
+    position: absolute; bottom: -20px; right: -20px;
+    background: linear-gradient(135deg, var(--teal), var(--teal-light));
+    color: var(--navy);
+    border-radius: 16px;
+    padding: 20px 24px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,191,165,0.3);
+  }
+
+  .about-badge strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  .about-badge span { font-size: 0.8rem; font-weight: 600; opacity: 0.8; }
+
+  .about-text p {
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+
+  .cta-btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: linear-gradient(135deg, var(--teal), var(--teal-light));
+    color: var(--navy);
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: opacity 0.2s, transform 0.2s;
+    margin-top: 8px;
+  }
+
+  .cta-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+
+  /* ─── NEWSLETTER ─── */
+  .newsletter {
+    padding: 80px 8%;
+    text-align: center;
+  }
+
+  .newsletter-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    padding: 64px;
+    max-width: 660px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .newsletter-box::before {
+    content: '';
+    position: absolute; top: -60px; left: 50%; transform: translateX(-50%);
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(0,191,165,0.15), transparent 70%);
+    pointer-events: none;
+  }
+
+  .newsletter-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .newsletter-box p {
+    color: var(--muted);
+    margin-bottom: 32px;
+    font-size: 0.95rem;
+  }
+
+  .nl-form {
+    display: flex; gap: 12px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 6px 6px 6px 18px;
+  }
+
+  .nl-form input {
+    flex: 1; background: none; border: none; outline: none;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--white);
+    font-size: 0.9rem;
+  }
+
+  .nl-form input::placeholder { color: var(--muted); }
+
+  .nl-btn {
+    background: linear-gradient(135deg, var(--teal), var(--teal-light));
+    color: var(--navy);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  .nl-btn:hover { opacity: 0.9; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    padding: 60px 8% 40px;
+    border-top: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+  }
+
+  .footer-brand p {
+    color: var(--muted);
+    font-size: 0.875rem;
+    line-height: 1.7;
+    margin: 16px 0 24px;
+    max-width: 300px;
+  }
+
+  .footer-col h4 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 12px; }
+  .footer-col ul a {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 0.875rem;
+    transition: color 0.2s;
+  }
+  .footer-col ul a:hover { color: var(--teal); }
+
+  .footer-bottom {
+    border-top: 1px solid var(--border);
+    padding: 24px 8%;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+
+  /* Scroll reveal */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s, transform 0.7s; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .hero-content { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .about-section { grid-template-columns: 1fr; }
+    footer { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 640px) {
+    nav ul { display: none; }
+    .hero-stats { flex-wrap: wrap; gap: 20px; }
+    footer { grid-template-columns: 1fr; }
+    .newsletter-box { padding: 40px 28px; }
+    .nl-form { flex-direction: column; padding: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">
+    <div class="logo-icon">🦷</div>
+    Dental School Secondary
+  </div>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Secondary Database</a></li>
+    <li><a href="#">Application Services</a></li>
+    <li><a href="#">Other Resources</a></li>
+    <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-glow"></div>
+
+  <div class="hero-content">
+    <!-- LEFT -->
+    <div class="hero-left">
+      <div class="hero-badge"><span>✦</span> #1 Pre-Dental Resource</div>
+
+      <h1>Your Path to<br><em>Dental School</em><br>Starts Here</h1>
+
+      <p class="hero-sub">
+        Expert guidance, comprehensive secondary databases, and tailored application services — everything you need to navigate dental school admissions with confidence.
+      </p>
+
+      <!-- Search bar -->
+      <div class="search-wrap">
+        <div class="search-icon">📍</div>
+        <input type="text" placeholder="Search by state, school, or program…">
+        <button class="search-btn">Search Schools</button>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num">200+</div>
+          <div class="stat-label">Schools Listed</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">94%</div>
+          <div class="stat-label">Acceptance Rate</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">12k+</div>
+          <div class="stat-label">Pre-Dents Helped</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT — 3D Tooth with roots -->
+    <div class="hero-right">
+      <div class="tooth-wrapper">
+        <div class="tooth-glow-ring"></div>
+        <canvas id="toothCanvas"></canvas>
+
+        <div class="float-card card1">
+          <div class="card-icon">🎓</div>
+          <div class="card-label">Success Rate</div>
+          <div class="card-val">94.2%</div>
+        </div>
+
+        <div class="float-card card2">
+          <div class="card-icon">📋</div>
+          <div class="card-label">Secondaries</div>
+          <div class="card-val">200+ Schools</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+  <div class="section-label">What We Offer</div>
+  <h2 class="section-title reveal">Services Built for<br>Pre-Dental Success</h2>
+  <p class="section-sub reveal">From secondary databases to personalized application coaching, we've got every step of your journey covered.</p>
+
+  <div class="cards-grid">
+    <div class="card reveal">
+      <span class="card-emoji">🗂️</span>
+      <h3>Secondary Database</h3>
+      <p>Access our comprehensive database of dental school secondary prompts, deadlines, and requirements — organized and easy to navigate.</p>
+      <a href="#" class="card-link">View Database →</a>
+    </div>
+
+    <div class="card reveal">
+      <span class="card-emoji">📝</span>
+      <h3>Admissions Application</h3>
+      <p>Expert review and coaching for your personal statements, secondary essays, and application materials from dentists and admissions insiders.</p>
+      <a href="#" class="card-link">Get Started →</a>
+    </div>
+
+    <div class="card reveal">
+      <span class="card-emoji">🗺️</span>
+      <h3>School Search by Location</h3>
+      <p>Filter dental schools by state, program length, in-state vs. out-of-state costs, and acceptance rates to find your best fit.</p>
+      <a href="#" class="card-link">Explore Schools →</a>
+    </div>
+
+    <div class="card reveal">
+      <span class="card-emoji">💬</span>
+      <h3>Expert Advice</h3>
+      <p>One-on-one consultations with current dental students and admissions experts who've been where you are now.</p>
+      <a href="#" class="card-link">Book a Session →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<div class="about-section">
+  <div class="about-visual reveal">
+    <div class="about-img"></div>
+    <div class="about-badge">
+      <strong>2022</strong>
+      <span>Est. Trusted Resource</span>
+    </div>
+  </div>
+
+  <div class="about-text reveal">
+    <div class="section-label">About Us</div>
+    <h2 class="section-title">Making Dental School<br>Applications <em style="font-style:normal;color:var(--teal-light)">Easy</em></h2>
+    <p>Dental School Secondary was founded by pre-dental students who experienced firsthand how overwhelming and opaque the application process can be. We built the resource we wished we'd had.</p>
+    <p>Our mission is to demystify every step — from your AADSAS application to school-specific secondaries — so you can focus on putting your best self forward.</p>
+    <a href="#" class="cta-btn">Learn More About Us →</a>
+  </div>
+</div>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="newsletter-box reveal">
+    <div class="section-label" style="justify-content:center">Stay Updated</div>
+    <h2>Sign Up for Our Newsletter</h2>
+    <p>Get the latest deadlines, school updates, and application tips delivered straight to your inbox.</p>
+    <div class="nl-form">
+      <input type="email" placeholder="Enter your email address…">
+      <button class="nl-btn">Subscribe</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-brand">
+    <div class="logo">
+      <div class="logo-icon">🦷</div>
+      Dental School Secondary
+    </div>
+    <p>The #1 platform helping pre-dental students navigate applications with confidence and clarity.</p>
+    <p style="font-size:0.8rem;color:var(--muted)">📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="81e2eeeff5e0e2f5c1e5e4eff5e0edf2e2e9eeeeedf2e4e2eeefe5e0f3f8afe2eeec">[email&#160;protected]</a></p>
+  </div>
+
+  <div class="footer-col">
+    <h4>Support</h4>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Secondary Databases</a></li>
+      <li><a href="#">Application Services</a></li>
+      <li><a href="#">Other Resources</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h4>Resources</h4>
+    <ul>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">DAT Prep</a></li>
+      <li><a href="#">Interview Tips</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  © Dental School Secondary 2022 — All Rights Reserved
+</div>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function() {
+  const canvas = document.getElementById('toothCanvas');
+  const wrapper = canvas.parentElement;
+  const W = wrapper.clientWidth || 460;
+  const H = wrapper.clientHeight || 540;
+  canvas.width = W; canvas.height = H;
+
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setSize(W, H);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.shadowMap.enabled = true;
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(42, W / H, 0.1, 100);
+  camera.position.set(0, 1.2, 7);
+  camera.lookAt(0, 0.2, 0);
+
+  const crownMat = new THREE.MeshPhysicalMaterial({
+    color: 0xeef4ff, roughness: 0.08, metalness: 0.0,
+    clearcoat: 1.0, clearcoatRoughness: 0.05,
+  });
+  const rootMat = new THREE.MeshPhysicalMaterial({ color: 0xd4b896, roughness: 0.55 });
+  const pulpMat = new THREE.MeshPhysicalMaterial({ color: 0xd44040, roughness: 0.7, emissive: 0x660000, emissiveIntensity: 0.3 });
+  const cementMat = new THREE.MeshPhysicalMaterial({ color: 0xc8a878, roughness: 0.6 });
+  const gumMat = new THREE.MeshPhysicalMaterial({ color: 0xf08080, roughness: 0.65, transparent: true, opacity: 0.55, side: THREE.DoubleSide });
+
+  function lathe(pts, segs) { return new THREE.LatheGeometry(pts, segs || 48); }
+
+  // Crown
+  const crownPts = [
+    new THREE.Vector2(0.0, 0.0), new THREE.Vector2(0.55, 0.05),
+    new THREE.Vector2(0.90, 0.25), new THREE.Vector2(1.05, 0.60),
+    new THREE.Vector2(1.10, 1.00), new THREE.Vector2(1.05, 1.40),
+    new THREE.Vector2(0.90, 1.70), new THREE.Vector2(0.65, 1.90),
+    new THREE.Vector2(0.30, 2.00), new THREE.Vector2(0.0, 2.02),
+  ];
+  const crown = new THREE.Mesh(lathe(crownPts, 52), crownMat);
+  crown.position.y = 1.0;
+  scene.add(crown);
+
+  // Cusps
+  [[0.42,0,0],[-.42,0,0],[0,0,.42],[0,0,-.42],[.3,0,.3],[-.3,0,-.3]].forEach(([x,y,z])=>{
+    const cusp = new THREE.Mesh(new THREE.SphereGeometry(0.22,20,16), crownMat);
+    cusp.position.set(x, 3.19, z); cusp.scale.y = 0.55;
+    scene.add(cusp);
+  });
+
+  // CEJ
+  const cejPts = [new THREE.Vector2(0.52,0), new THREE.Vector2(0.56,0.08), new THREE.Vector2(0.52,0.16)];
+  const cej = new THREE.Mesh(lathe(cejPts, 48), cementMat);
+  cej.position.y = 0.88; scene.add(cej);
+
+  // Roots
+  function makeRoot(rx, rz, height, tilt) {
+    const pts = [
+      new THREE.Vector2(0.0,0.0), new THREE.Vector2(0.14,0.1),
+      new THREE.Vector2(0.28,0.4), new THREE.Vector2(0.38,0.9),
+      new THREE.Vector2(0.40,1.4), new THREE.Vector2(0.36,2.0),
+      new THREE.Vector2(0.24,height*0.75), new THREE.Vector2(0.10,height*0.95),
+      new THREE.Vector2(0.01,height),
+    ];
+    const mesh = new THREE.Mesh(lathe(pts, 32), rootMat);
+    mesh.position.set(rx, 0, rz); mesh.rotation.z = tilt;
+    scene.add(mesh);
+  }
+  makeRoot(-0.45, 0.0, 3.0,  0.18);
+  makeRoot( 0.45, 0.0, 3.0, -0.18);
+  makeRoot( 0.0, -0.3, 2.7,  0.0);
+
+  // Pulp chamber
+  const pulpPts = [
+    new THREE.Vector2(0.0,0.0), new THREE.Vector2(0.10,0.2),
+    new THREE.Vector2(0.18,0.7), new THREE.Vector2(0.20,1.2),
+    new THREE.Vector2(0.22,1.7), new THREE.Vector2(0.18,2.1),
+    new THREE.Vector2(0.10,2.3), new THREE.Vector2(0.0,2.35),
+  ];
+  const pulp = new THREE.Mesh(lathe(pulpPts, 32), pulpMat);
+  pulp.position.y = 0.4; pulp.scale.set(0.78,0.78,0.78);
+  scene.add(pulp);
+
+  // Root canals
+  [-0.28, 0.0, 0.28].forEach((ox, i) => {
+    const pts2 = [
+      new THREE.Vector2(0.0,0.0), new THREE.Vector2(0.06,0.5),
+      new THREE.Vector2(0.07,1.2), new THREE.Vector2(0.05,2.0), new THREE.Vector2(0.01,2.5),
+    ];
+    const canal = new THREE.Mesh(lathe(pts2, 20), pulpMat);
+    canal.position.set(ox*0.6, -0.05, i===1?-0.18:0);
+    canal.scale.set(0.5,0.5,0.5);
+    scene.add(canal);
+  });
+
+  // Gumline
+  const gum = new THREE.Mesh(new THREE.CylinderGeometry(1.6,1.6,0.12,52,1,false), gumMat);
+  gum.position.y = 0.94; scene.add(gum);
+
+  // Particles
+  const pCount = 200;
+  const pPos = new Float32Array(pCount*3);
+  for(let i=0;i<pCount;i++){
+    const th = Math.random()*Math.PI*2;
+    const r = 1.4+Math.random()*1.0;
+    pPos[i*3]=Math.cos(th)*r; pPos[i*3+1]=Math.random()*5-2; pPos[i*3+2]=Math.sin(th)*r;
+  }
+  const pGeo = new THREE.BufferGeometry();
+  pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
+  const particles = new THREE.Points(pGeo, new THREE.PointsMaterial({color:0x00e5c9,size:0.045,transparent:true,opacity:0.65}));
+  scene.add(particles);
+
+  // Lights
+  scene.add(new THREE.AmbientLight(0x8ab4c8, 0.65));
+  const key = new THREE.DirectionalLight(0xffffff, 2.2);
+  key.position.set(4,8,5); scene.add(key);
+  const fill = new THREE.DirectionalLight(0x00e5c9, 1.0);
+  fill.position.set(-5,3,-3); scene.add(fill);
+  const rim = new THREE.DirectionalLight(0x4488ff, 0.6);
+  rim.position.set(0,-4,4); scene.add(rim);
+  const glow = new THREE.PointLight(0x00bfa5, 1.4, 8);
+  glow.position.set(0,-3.5,1); scene.add(glow);
+
+  // Group
+  const toothGroup = new THREE.Group();
+  const toMove = scene.children.filter(c=>!(c.isLight||c===particles));
+  toMove.forEach(c=>{ scene.remove(c); toothGroup.add(c); });
+  toothGroup.position.y = -1.2;
+  scene.add(toothGroup);
+
+  // Interaction
+  let isDragging=false, prevX=0, rotY=0;
+  canvas.addEventListener('mousedown', e=>{ isDragging=true; prevX=e.clientX; });
+  window.addEventListener('mouseup', ()=>{ isDragging=false; });
+  window.addEventListener('mousemove', e=>{ if(!isDragging)return; rotY+=(e.clientX-prevX)*0.012; prevX=e.clientX; });
+
+  let t=0;
+  function animate(){
+    requestAnimationFrame(animate);
+    t+=0.008;
+    if(!isDragging){ toothGroup.rotation.y+=0.006; } else { toothGroup.rotation.y=rotY; }
+    toothGroup.position.y=-1.2+Math.sin(t)*0.06;
+    glow.intensity=1.2+Math.sin(t*1.5)*0.4;
+    particles.rotation.y-=0.003;
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  window.addEventListener('resize', ()=>{
+    const nW=wrapper.clientWidth||460, nH=wrapper.clientHeight||540;
+    camera.aspect=nW/nH; camera.updateProjectionMatrix();
+    renderer.setSize(nW,nH);
+  });
+})();
+</script>
+</body>
+</html>
