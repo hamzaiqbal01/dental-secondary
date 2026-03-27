@@ -3,6 +3,7 @@ import styles from "./landing-page.module.css";
 import { ToothCanvas } from "./tooth-canvas";
 import { Navbar } from "@/shared/components/layout/navbar";
 import { HeroSearch } from "./hero-search";
+import { NewsletterForm } from "./newsletter-form";
 
 const serviceCards = [
   {
@@ -169,12 +170,7 @@ export function LandingPage() {
           <p className={styles.newsletterSub}>
             Get the latest deadlines, school updates, and application tips delivered straight to your inbox.
           </p>
-          <div className={styles.nlForm}>
-            <input className={styles.nlInput} type="email" placeholder="Enter your email address..." />
-            <button className={styles.nlBtn} type="button">
-              Subscribe
-            </button>
-          </div>
+          <NewsletterForm />
         </div>
       </section>
 
