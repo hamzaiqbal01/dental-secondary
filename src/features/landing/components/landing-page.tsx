@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./landing-page.module.css";
 import { ToothCanvas } from "./tooth-canvas";
 import { Navbar } from "@/shared/components/layout/navbar";
 import { HeroSearch } from "./hero-search";
-import { NewsletterForm } from "./newsletter-form";
+import { NewsletterSection } from "@/shared/components/newsletter/newsletter-section";
 
 const serviceCards = [
   {
@@ -12,6 +13,8 @@ const serviceCards = [
     description:
       "Access our comprehensive database of dental school secondary prompts, deadlines, and requirements - organized and easy to navigate.",
     link: "View Database ->",
+    href: "/database",
+    external: false,
   },
   {
     emoji: "📝",
@@ -19,6 +22,8 @@ const serviceCards = [
     description:
       "Expert review and coaching for your personal statements, secondary essays, and application materials from dentists and admissions insiders.",
     link: "Get Started ->",
+    href: "https://www.bootcamp.com/dat/application-services",
+    external: true,
   },
   {
     emoji: "🗺️",
@@ -26,18 +31,22 @@ const serviceCards = [
     description:
       "Filter dental schools by state, program length, in-state vs. out-of-state costs, and acceptance rates to find your best fit.",
     link: "Explore Schools ->",
+    href: "/database",
+    external: false,
   },
   {
     emoji: "💬",
     title: "Expert Advice",
     description: "One-on-one consultations with current dental students and admissions experts who've been where you are now.",
     link: "Book a Session ->",
+    href: "/contact",
+    external: false,
   },
 ];
 
 const stats = [
   { value: "200+", label: "Schools Listed" },
-  { value: "94%", label: "Acceptance Rate" },
+  { value: "98%+", label: "Acceptance Rate" },
   { value: "12k+", label: "Pre-Dents Helped" },
 ];
 
@@ -85,7 +94,7 @@ export function LandingPage() {
               <div className={`${styles.floatCard} ${styles.card1}`}>
                 <div className={styles.cardIcon}>🎓</div>
                 <div className={styles.cardLabel}>Success Rate</div>
-                <div className={styles.cardVal}>94.2%</div>
+                <div className={styles.cardVal}>98%+</div>
               </div>
 
               <div className={`${styles.floatCard} ${styles.card2}`}>
@@ -111,16 +120,35 @@ export function LandingPage() {
         </p>
 
         <div className={styles.cardsGrid}>
-          {serviceCards.map((card) => (
-            <article className={styles.card} key={card.title}>
-              <span className={styles.cardEmoji}>{card.emoji}</span>
-              <h3 className={styles.cardTitle}>{card.title}</h3>
-              <p className={styles.cardDesc}>{card.description}</p>
-              <a className={styles.cardLink} href="#">
-                {card.link}
+          {serviceCards.map((card) =>
+            card.external ? (
+              <a
+                key={card.title}
+                href={card.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.card}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <span className={styles.cardEmoji}>{card.emoji}</span>
+                <h3 className={styles.cardTitle}>{card.title}</h3>
+                <p className={styles.cardDesc}>{card.description}</p>
+                <span className={styles.cardLink}>{card.link}</span>
               </a>
-            </article>
-          ))}
+            ) : (
+              <Link
+                key={card.title}
+                href={card.href}
+                className={styles.card}
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <span className={styles.cardEmoji}>{card.emoji}</span>
+                <h3 className={styles.cardTitle}>{card.title}</h3>
+                <p className={styles.cardDesc}>{card.description}</p>
+                <span className={styles.cardLink}>{card.link}</span>
+              </Link>
+            )
+          )}
         </div>
       </section>
 
@@ -163,16 +191,7 @@ export function LandingPage() {
         </div>
       </section>
 
-      <section className={styles.newsletter}>
-        <div className={styles.newsletterBox}>
-          <div className={`${styles.sectionLabel} ${styles.centerLabel}`}>Stay Updated</div>
-          <h2 className={styles.newsletterTitle}>Sign Up for Our Newsletter</h2>
-          <p className={styles.newsletterSub}>
-            Get the latest deadlines, school updates, and application tips delivered straight to your inbox.
-          </p>
-          <NewsletterForm />
-        </div>
-      </section>
+      <NewsletterSection />
 
       <footer className={styles.footer} id="contact">
         <div className={styles.footerBrand}>
@@ -181,7 +200,7 @@ export function LandingPage() {
             Dental School Secondary
           </div>
           <p>The #1 platform helping pre-dental students navigate applications with confidence and clarity.</p>
-          <p className={styles.footerMini}>📧 [email protected]</p>
+          <p className={styles.footerMini}>📧 dentalschoolsecondary@gmail.com</p>
         </div>
 
         <div className={styles.footerCol}>

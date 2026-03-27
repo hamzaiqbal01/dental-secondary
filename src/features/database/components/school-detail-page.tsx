@@ -10,6 +10,8 @@ import {
 import { schools } from "../data/schools";
 import { SectionNav } from "./section-nav";
 import { CopyBtn, CopyAllBtn } from "./copy-btn";
+import { SidebarNewsletterForm } from "./sidebar-newsletter-form";
+import { NewsletterSection } from "@/shared/components/newsletter/newsletter-section";
 import styles from "./school-detail-page.module.css";
 
 type Props = {
@@ -343,32 +345,6 @@ export async function SchoolDetailPage({ slug }: Props) {
                 {totalQuestions === 0 ? "None" : totalQuestions}
               </span>
             </div>
-            <div className={styles.statusRow}>
-              <span className={styles.srLabel}>Distribution</span>
-              <span className={`${styles.srVal} ${styles.srValTeal}`}>
-                {detail.distribution}
-              </span>
-            </div>
-            <div className={styles.statusRow}>
-              <span className={styles.srLabel}>Last Updated</span>
-              <span className={styles.srVal}>2024 Cycle</span>
-            </div>
-          </div>
-
-          {/* Help card */}
-          <div className={styles.sidebarCard}>
-            <span className={styles.scEmoji}>🎯</span>
-            <div className={styles.scTitle}>Need Help With {detail.abbr}?</div>
-            <p className={styles.scDesc}>
-              Our admissions experts can review your {detail.abbr} secondary
-              essays and give you personalized feedback.
-            </p>
-            <a href="#" className={styles.scBtn}>
-              Get Essay Review
-            </a>
-            <a href="#" className={`${styles.scBtn} ${styles.scBtnGhost}`}>
-              Book a Free Consult
-            </a>
           </div>
 
           {/* Checklist card */}
@@ -401,121 +377,13 @@ export async function SchoolDetailPage({ slug }: Props) {
               Get notified when {detail.abbr} updates their secondary or
               deadlines change.
             </p>
-            <input
-              type="email"
-              placeholder="Your email…"
-              className={styles.emailInput}
-            />
-            <a href="#" className={styles.scBtn}>
-              Subscribe Free
-            </a>
+            <SidebarNewsletterForm />
           </div>
         </aside>
       </div>
 
       {/* ── NEWSLETTER ──────────────────────────────────────────────── */}
-      <section
-        style={{
-          padding: "80px 8%",
-          textAlign: "center",
-          borderTop: "1px solid var(--border)",
-        }}
-      >
-        <div
-          style={{
-            background: "var(--card-bg)",
-            border: "1px solid var(--border)",
-            borderRadius: "28px",
-            padding: "60px",
-            maxWidth: "640px",
-            margin: "0 auto",
-            position: "relative",
-            overflow: "hidden",
-          }}
-        >
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
-              color: "var(--teal)",
-              fontSize: "0.78rem",
-              fontWeight: 600,
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              marginBottom: "14px",
-            }}
-          >
-            <span
-              style={{
-                display: "block",
-                width: "24px",
-                height: "2px",
-                background: "var(--teal)",
-              }}
-            />
-            Stay Updated
-          </div>
-          <h2
-            style={{
-              fontFamily: "var(--font-serif)",
-              fontSize: "1.9rem",
-              marginBottom: "10px",
-            }}
-          >
-            Sign Up for Our Newsletter
-          </h2>
-          <p
-            style={{
-              color: "var(--muted)",
-              marginBottom: "28px",
-              fontSize: "0.93rem",
-            }}
-          >
-            Get the latest deadlines, school updates, and application tips
-            delivered straight to your inbox.
-          </p>
-          <div
-            style={{
-              display: "flex",
-              gap: "10px",
-              background: "rgba(255,255,255,0.05)",
-              border: "1px solid rgba(255,255,255,0.1)",
-              borderRadius: "12px",
-              padding: "6px 6px 6px 18px",
-            }}
-          >
-            <input
-              type="email"
-              placeholder="Enter your email address…"
-              style={{
-                flex: 1,
-                background: "none",
-                border: "none",
-                outline: "none",
-                fontFamily: "inherit",
-                color: "var(--white)",
-                fontSize: "0.9rem",
-              }}
-            />
-            <button
-              style={{
-                background: "linear-gradient(135deg, var(--teal), var(--teal-light))",
-                color: "var(--navy)",
-                border: "none",
-                padding: "11px 22px",
-                borderRadius: "8px",
-                fontFamily: "inherit",
-                fontWeight: 700,
-                fontSize: "0.875rem",
-                cursor: "pointer",
-              }}
-            >
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </section>
+      <NewsletterSection />
 
       <Footer />
     </div>

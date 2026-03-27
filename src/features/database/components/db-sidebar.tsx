@@ -1,22 +1,9 @@
+import { SidebarNewsletterForm } from "./sidebar-newsletter-form";
 import styles from "./database-page.module.css";
 
 export function DbSidebar() {
   return (
     <aside className={styles.sidebar}>
-      <div className={styles.sidebarCard}>
-        <span className={styles.sidebarCardEmoji}>🎯</span>
-        <div className={styles.sidebarCardTitle}>Need Application Help?</div>
-        <p>
-          Our admissions experts help craft compelling secondary essays, interview prep, and full application strategy.
-        </p>
-        <a href="#" className={styles.sidebarBtn}>
-          View Application Services
-        </a>
-        <a href="#" className={`${styles.sidebarBtn} ${styles.sidebarBtnOutline}`}>
-          Schedule a Free Call
-        </a>
-      </div>
-
       <div className={styles.sidebarCard}>
         <span className={styles.sidebarCardEmoji}>💡</span>
         <div className={styles.sidebarCardTitle}>Secondary Tips</div>
@@ -44,8 +31,7 @@ export function DbSidebar() {
         <span className={styles.sidebarCardEmoji}>📬</span>
         <div className={styles.sidebarCardTitle}>Stay Updated</div>
         <p>Get notified when secondaries open or deadlines change.</p>
-        <input type="email" placeholder="Your email address…" className={styles.nlInput} />
-        <button className={styles.sidebarBtn}>Subscribe Free</button>
+        <SidebarNewsletterForm />
       </div>
     </aside>
   );

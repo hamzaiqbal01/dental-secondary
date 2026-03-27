@@ -8,7 +8,7 @@ import styles from "./navbar.module.css";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Secondary Database", href: "/database" },
-  { label: "Application Services", href: "/services" },
+  { label: "Application Services", href: "https://www.bootcamp.com/dat/application-services", external: true },
   { label: "Other Resources", href: "/resources" },
 ];
 
@@ -33,18 +33,19 @@ export function Navbar() {
 
       {/* Desktop nav */}
       <ul className={styles.navList}>
-        {navLinks.map(({ label, href }) => (
+        {navLinks.map(({ label, href, external }) => (
           <li key={href}>
             <Link
               href={href}
               className={`${styles.navLink}${pathname === href ? ` ${styles.active}` : ""}`}
+              {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
             >
               {label}
             </Link>
           </li>
         ))}
         <li>
-          <Link href="#contact" className={`${styles.navLink} ${styles.navCta}`}>
+          <Link href="/contact" className={`${styles.navLink} ${styles.navCta}`}>
             Contact Us
           </Link>
         </li>
@@ -66,12 +67,13 @@ export function Navbar() {
       {menuOpen && (
         <div className={styles.mobileMenu}>
           <ul className={styles.mobileList}>
-            {navLinks.map(({ label, href }) => (
+            {navLinks.map(({ label, href, external }) => (
               <li key={href}>
                 <Link
                   href={href}
                   className={`${styles.mobileLink}${pathname === href ? ` ${styles.active}` : ""}`}
                   onClick={() => setMenuOpen(false)}
+                  {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 >
                   {label}
                 </Link>
@@ -79,7 +81,7 @@ export function Navbar() {
             ))}
             <li>
               <Link
-                href="#contact"
+                href="/contact"
                 className={`${styles.mobileLink} ${styles.mobileCta}`}
                 onClick={() => setMenuOpen(false)}
               >

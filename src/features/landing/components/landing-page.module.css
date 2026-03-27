@@ -364,6 +364,7 @@
 }
 
 .card {
+  display: block;
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 20px;

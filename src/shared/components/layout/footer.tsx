@@ -4,7 +4,7 @@ import styles from "./footer.module.css";
 export function Footer() {
   return (
     <>
-      <footer className={styles.footer} id="contact">
+      <footer className={styles.footer}>
         <div className={styles.footerBrand}>
           <Link href="/" className={styles.logo}>
             <div className={styles.logoIcon}>🦷</div>
@@ -20,7 +20,7 @@ export function Footer() {
             <li><Link href="/database">Secondary Databases</Link></li>
             <li><Link href="/services">Application Services</Link></li>
             <li><Link href="/resources">Other Resources</Link></li>
-            <li><Link href="#contact">Contact Us</Link></li>
+            <li><Link href="/contact">Contact Us</Link></li>
           </ul>
         </div>
 

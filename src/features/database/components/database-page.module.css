@@ -237,6 +237,7 @@
   grid-template-columns: 1fr 268px;
   gap: 32px;
   padding: 48px 8% 80px;
+  align-items: flex-start;
 }
 
 /* ─── STATE SECTIONS ─── */
@@ -634,10 +635,51 @@
 
 .nlInput:focus {
   border-color: var(--teal);
+  outline: none;
 }
 
 .nlInput::placeholder {
   color: var(--muted);
+}
+
+.nlInputSpaced {
+  margin-top: 8px;
+}
+
+.nlInputError {
+  border-color: rgba(248, 113, 113, 0.5) !important;
+}
+
+.sidebarFormError {
+  font-size: 0.75rem;
+  color: #f87171;
+  margin: 5px 0 0;
+}
+
+.sidebarSuccess {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 191, 165, 0.1);
+  border: 1px solid rgba(0, 191, 165, 0.25);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--teal-light);
+}
+
+.sidebarSuccessIcon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  background: linear-gradient(135deg, var(--teal), var(--teal-light));
+  color: var(--navy);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 0.75rem;
+  font-weight: 700;
 }
 
 /* ─── NEWSLETTER ─── */
