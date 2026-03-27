@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { School } from "../data/schools";
 import styles from "./database-page.module.css";
 
@@ -9,7 +10,11 @@ type SchoolCardProps = {
 
 export function SchoolCard({ school, saved, onToggleSave }: SchoolCardProps) {
   return (
-    <div className={styles.schoolCard}>
+    <Link
+      href={`/database/${school.slug}`}
+      className={styles.schoolCard}
+      style={{ textDecoration: "none", color: "inherit" }}
+    >
       <div className={styles.cardTopRow}>
         <span className={styles.abbrTag}>{school.abbr}</span>
       </div>
@@ -22,14 +27,18 @@ export function SchoolCard({ school, saved, onToggleSave }: SchoolCardProps) {
       </div>
 
       <div className={styles.cardActions}>
-        <button className={styles.btnView}>View Secondary →</button>
+        <span className={styles.btnView}>View Secondary →</span>
         <button
           className={`${styles.btnSave}${saved ? ` ${styles.saved}` : ""}`}
-          onClick={() => onToggleSave(school.abbr)}
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            onToggleSave(school.abbr);
+          }}
         >
           {saved ? "★ Saved" : "☆ Save"}
         </button>
       </div>
-    </div>
+    </Link>
   );
 }
