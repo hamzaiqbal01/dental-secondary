@@ -29,7 +29,7 @@ const FAQ_ITEMS = [
   {
     question: "Is the Bootcamp admissions service worth it?",
     answer:
-      "For many students, yes — especially if you're not sure how to make your essays stand out or you're preparing for MMI interviews. Bootcamp is the #1 rated dental admissions service with a strong track record of results. It's particularly valuable for applicants re-applying or targeting competitive programs.",
+      "We have an exceptionally high satisfaction rate and are able to get students with lower academics admitted into multiple schools.",
   },
 ];
 
@@ -70,7 +70,7 @@ export default function ResourcesPage() {
 
           <div className={styles.headerStats}>
             <div>
-              <div className={styles.hsNum}>3</div>
+              <div className={styles.hsNum}>4</div>
               <div className={styles.hsLbl}>Featured Resources</div>
             </div>
             <div>
@@ -176,6 +176,30 @@ export default function ResourcesPage() {
               bootcamp.com/dat/admissions
             </div>
             <span className={styles.resLinkBtn}>Explore Services ↗</span>
+          </a>
+
+          {/* Resource 4 */}
+          <a
+            href="https://www.bootcamp.com/dat/private-tutoring"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.resourceCard}
+          >
+            <span className={styles.resNum}>4</span>
+            <div className={`${styles.resIconWrap} ${styles.resIconTeal}`}>🎓</div>
+            <span className={`${styles.resTag} ${styles.resTagServices}`}>Private Tutoring</span>
+            <h3 className={styles.resTitle}>Private Tutoring by Bootcamp</h3>
+            <p className={styles.resDesc}>
+              One-on-one tutoring sessions with expert instructors to help you
+              master the DAT and strengthen your application. Personalized
+              sessions tailored to your weaknesses — so you study smarter and
+              score higher.
+            </p>
+            <div className={styles.resUrl}>
+              <span className={styles.resUrlDot} />
+              bootcamp.com/dat/private-tutoring
+            </div>
+            <span className={styles.resLinkBtn}>Get Tutoring ↗</span>
           </a>
 
         </div>
