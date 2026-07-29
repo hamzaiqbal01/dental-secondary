@@ -18,7 +18,7 @@ export function Footer() {
           <ul>
             <li><Link href="/">Home</Link></li>
             <li><Link href="/database">Secondary Databases</Link></li>
-            <li><Link href="/services">Application Services</Link></li>
+            <li><a href="https://www.bootcamp.com/dat/application-services" target="_blank" rel="noopener noreferrer">Application Services</a></li>
             <li><Link href="/resources">Other Resources</Link></li>
             <li><Link href="/contact">Contact Us</Link></li>
           </ul>

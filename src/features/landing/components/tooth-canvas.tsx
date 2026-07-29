@@ -252,6 +252,13 @@ export function ToothCanvas({ className }: ToothCanvasProps) {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className={className} />;
+  return (
+    <canvas
+      ref={canvasRef}
+      className={className}
+      aria-label="Interactive 3D tooth model"
+      role="img"
+    />
+  );
 }
 

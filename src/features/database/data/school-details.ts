@@ -61,7 +61,7 @@ const noEssayTip = (abbr: string): Tip => ({
 export const schoolDetails: SchoolDetail[] = [
   // ── ALABAMA ──────────────────────────────────────────────────────────────
   {
-    slug: "uab",
+    slug: "university-of-alabama-school-of-dentistry",
     abbr: "UAB",
     name: "University of Alabama School of Dentistry",
     stateAbbr: "AL",
@@ -85,7 +85,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── ARIZONA ──────────────────────────────────────────────────────────────
   {
-    slug: "atsu-az",
+    slug: "at-still-university-arizona-school-of-dentistry",
     abbr: "ASDOH / ATSU-AZ",
     name: "A.T. Still University, Arizona School of Dentistry and Oral Health",
     stateAbbr: "AZ",
@@ -106,7 +106,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "mwu-az",
+    slug: "midwestern-university-college-of-dental-medicine-arizona",
     abbr: "CDMA / MWU-AZ",
     name: "Midwestern University College of Dental Medicine – Arizona",
     stateAbbr: "AZ",
@@ -127,7 +127,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── CALIFORNIA ───────────────────────────────────────────────────────────
   {
-    slug: "cnu",
+    slug: "california-northstate-university-college-of-dental-medicine",
     abbr: "CNU",
     name: "California Northstate University College of Dental Medicine",
     stateAbbr: "CA",
@@ -147,7 +147,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "llu",
+    slug: "loma-linda-university-school-of-dentistry",
     abbr: "LLU",
     name: "Loma Linda University School of Dentistry",
     stateAbbr: "CA",
@@ -170,7 +170,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "ucla",
+    slug: "ucla-school-of-dentistry",
     abbr: "UCLA",
     name: "University of California Los Angeles School of Dentistry",
     stateAbbr: "CA",
@@ -194,7 +194,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "ucsf",
+    slug: "ucsf-school-of-dentistry",
     abbr: "UCSF",
     name: "University of California San Francisco School of Dentistry",
     stateAbbr: "CA",
@@ -216,7 +216,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "uop",
+    slug: "university-of-pacific-dugoni-school-of-dentistry",
     abbr: "UoP",
     name: "University of the Pacific, Arthur A. Dugoni School of Dentistry",
     stateAbbr: "CA",
@@ -233,7 +233,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "usc",
+    slug: "usc-ostrow-school-of-dentistry",
     abbr: "USC",
     name: "University of Southern California, Herman Ostrow School of Dentistry",
     stateAbbr: "CA",
@@ -254,7 +254,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "westernu",
+    slug: "western-university-health-sciences-college-of-dental-medicine",
     abbr: "WesternU",
     name: "Western University of Health Sciences College of Dental Medicine",
     stateAbbr: "CA",
@@ -274,7 +274,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── COLORADO ─────────────────────────────────────────────────────────────
   {
-    slug: "cu",
+    slug: "university-of-colorado-school-of-dental-medicine",
     abbr: "CU",
     name: "University of Colorado School of Dental Medicine",
     stateAbbr: "CO",
@@ -293,7 +293,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── CONNECTICUT ──────────────────────────────────────────────────────────
   {
-    slug: "uconn",
+    slug: "university-of-connecticut-school-of-dental-medicine",
     abbr: "UConn",
     name: "University of Connecticut School of Dental Medicine",
     stateAbbr: "CT",
@@ -312,7 +312,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── WASHINGTON D.C. ──────────────────────────────────────────────────────
   {
-    slug: "howard",
+    slug: "howard-university-college-of-dentistry",
     abbr: "Howard",
     name: "Howard University College of Dentistry",
     stateAbbr: "DC",
@@ -339,7 +339,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── FLORIDA ──────────────────────────────────────────────────────────────
   {
-    slug: "lecom",
+    slug: "lake-erie-college-osteopathic-medicine-school-of-dental-medicine",
     abbr: "LECOM",
     name: "Lake Erie College of Osteopathic Medicine School of Dental Medicine",
     stateAbbr: "FL",
@@ -356,7 +356,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "nsu",
+    slug: "nova-southeastern-university-college-of-dental-medicine",
     abbr: "NSU",
     name: "Nova Southeastern University College of Dental Medicine",
     stateAbbr: "FL",
@@ -373,7 +373,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "uf",
+    slug: "university-of-florida-college-of-dentistry",
     abbr: "UF",
     name: "University of Florida College of Dentistry",
     stateAbbr: "FL",
@@ -391,7 +391,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── GEORGIA ──────────────────────────────────────────────────────────────
   {
-    slug: "dcg",
+    slug: "dental-college-of-georgia-augusta-university",
     abbr: "DCG",
     name: "Dental College of Georgia at Augusta University",
     stateAbbr: "GA",
@@ -415,7 +415,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── ILLINOIS ─────────────────────────────────────────────────────────────
   {
-    slug: "mwu-il",
+    slug: "midwestern-university-college-of-dental-medicine-illinois",
     abbr: "CDMI / MWU-IL",
     name: "Midwestern University College of Dental Medicine – Illinois",
     stateAbbr: "IL",
@@ -433,7 +433,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "siu",
+    slug: "southern-illinois-university-school-of-dental-medicine",
     abbr: "SIU",
     name: "Southern Illinois University School of Dental Medicine",
     stateAbbr: "IL",
@@ -451,7 +451,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "uic",
+    slug: "university-of-illinois-chicago-college-of-dentistry",
     abbr: "UIC",
     name: "University of Illinois at Chicago College of Dentistry",
     stateAbbr: "IL",
@@ -469,7 +469,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── INDIANA ──────────────────────────────────────────────────────────────
   {
-    slug: "iu",
+    slug: "indiana-university-school-of-dentistry",
     abbr: "IU",
     name: "Indiana University School of Dentistry",
     stateAbbr: "IN",
@@ -491,7 +491,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── IOWA ─────────────────────────────────────────────────────────────────
   {
-    slug: "ui",
+    slug: "university-of-iowa-college-of-dentistry",
     abbr: "UI",
     name: "University of Iowa College of Dentistry",
     stateAbbr: "IA",
@@ -518,7 +518,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── KENTUCKY ─────────────────────────────────────────────────────────────
   {
-    slug: "uk",
+    slug: "university-of-kentucky-college-of-dentistry",
     abbr: "UK",
     name: "University of Kentucky College of Dentistry",
     stateAbbr: "KY",
@@ -543,7 +543,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "uofl",
+    slug: "university-of-louisville-school-of-dentistry",
     abbr: "U of L",
     name: "University of Louisville School of Dentistry",
     stateAbbr: "KY",
@@ -566,7 +566,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── LOUISIANA ────────────────────────────────────────────────────────────
   {
-    slug: "lsu",
+    slug: "louisiana-state-university-school-of-dentistry",
     abbr: "LSU",
     name: "Louisiana State University Health Science Center School of Dentistry",
     stateAbbr: "LA",
@@ -585,7 +585,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── MAINE ────────────────────────────────────────────────────────────────
   {
-    slug: "une",
+    slug: "university-of-new-england-college-of-dental-medicine",
     abbr: "UNE",
     name: "University of New England College of Dental Medicine",
     stateAbbr: "ME",
@@ -608,7 +608,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── MARYLAND ─────────────────────────────────────────────────────────────
   {
-    slug: "umd",
+    slug: "university-of-maryland-school-of-dentistry",
     abbr: "UMB / UMD",
     name: "University of Maryland School of Dentistry",
     stateAbbr: "MD",
@@ -626,7 +626,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── MASSACHUSETTS ────────────────────────────────────────────────────────
   {
-    slug: "bu",
+    slug: "boston-university-school-of-dental-medicine",
     abbr: "BU / GSDM",
     name: "Boston University, Henry M. Goldman School of Dental Medicine",
     stateAbbr: "MA",
@@ -646,7 +646,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "harvard",
+    slug: "harvard-school-of-dental-medicine",
     abbr: "Harvard",
     name: "Harvard University School of Dental Medicine",
     stateAbbr: "MA",
@@ -663,7 +663,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "tufts",
+    slug: "tufts-university-school-of-dental-medicine",
     abbr: "Tufts",
     name: "Tufts University School of Dental Medicine",
     stateAbbr: "MA",
@@ -683,7 +683,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── MICHIGAN ─────────────────────────────────────────────────────────────
   {
-    slug: "udm",
+    slug: "university-of-detroit-mercy-school-of-dentistry",
     abbr: "UDM",
     name: "University of Detroit Mercy School of Dentistry",
     stateAbbr: "MI",
@@ -700,7 +700,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "umich",
+    slug: "university-of-michigan-school-of-dentistry",
     abbr: "UMich",
     name: "University of Michigan School of Dentistry",
     stateAbbr: "MI",
@@ -719,7 +719,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── MINNESOTA ────────────────────────────────────────────────────────────
   {
-    slug: "umn",
+    slug: "university-of-minnesota-school-of-dentistry",
     abbr: "UMN",
     name: "University of Minnesota School of Dentistry",
     stateAbbr: "MN",
@@ -739,7 +739,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── MISSISSIPPI ──────────────────────────────────────────────────────────
   {
-    slug: "ummc",
+    slug: "university-of-mississippi-school-of-dentistry",
     abbr: "UMMC",
     name: "University of Mississippi Medical Center School of Dentistry",
     stateAbbr: "MS",
@@ -757,7 +757,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── MISSOURI ─────────────────────────────────────────────────────────────
   {
-    slug: "atsu-mo",
+    slug: "at-still-university-missouri-school-of-dentistry",
     abbr: "ATSU-MO / MOSDOH",
     name: "A.T. Still University, Missouri School of Dentistry and Oral Health",
     stateAbbr: "MO",
@@ -777,7 +777,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "umkc",
+    slug: "university-of-missouri-kansas-city-school-of-dentistry",
     abbr: "UMKC",
     name: "University of Missouri Kansas City School of Dentistry",
     stateAbbr: "MO",
@@ -796,7 +796,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── NEBRASKA ─────────────────────────────────────────────────────────────
   {
-    slug: "creighton",
+    slug: "creighton-university-school-of-dentistry",
     abbr: "Creighton",
     name: "Creighton University School of Dentistry",
     stateAbbr: "NE",
@@ -816,7 +816,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "unmc",
+    slug: "university-of-nebraska-medical-center-college-of-dentistry",
     abbr: "UNMC",
     name: "University of Nebraska Medical Center College of Dentistry",
     stateAbbr: "NE",
@@ -836,7 +836,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── NEVADA ───────────────────────────────────────────────────────────────
   {
-    slug: "unlv",
+    slug: "university-of-nevada-las-vegas-school-of-dental-medicine",
     abbr: "UNLV",
     name: "University of Nevada Las Vegas School of Dental Medicine",
     stateAbbr: "NV",
@@ -854,7 +854,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── NEW JERSEY ───────────────────────────────────────────────────────────
   {
-    slug: "rutgers",
+    slug: "rutgers-school-of-dental-medicine",
     abbr: "Rutgers",
     name: "Rutgers School of Dental Medicine",
     stateAbbr: "NJ",
@@ -872,7 +872,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── NEW YORK ─────────────────────────────────────────────────────────────
   {
-    slug: "columbia",
+    slug: "columbia-university-college-of-dental-medicine",
     abbr: "Columbia",
     name: "Columbia University College of Dental Medicine",
     stateAbbr: "NY",
@@ -889,7 +889,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "nyu",
+    slug: "nyu-college-of-dentistry",
     abbr: "NYU",
     name: "New York University College of Dentistry",
     stateAbbr: "NY",
@@ -908,7 +908,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "stony-brook",
+    slug: "stony-brook-university-school-of-dental-medicine",
     abbr: "Stony Brook",
     name: "Stony Brook University School of Dental Medicine",
     stateAbbr: "NY",
@@ -927,7 +927,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "touro",
+    slug: "touro-college-of-dental-medicine",
     abbr: "Touro",
     name: "Touro College of Dental Medicine at New York Medical College",
     stateAbbr: "NY",
@@ -944,7 +944,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "ub",
+    slug: "university-at-buffalo-school-of-dental-medicine",
     abbr: "UB",
     name: "University at Buffalo School of Dental Medicine",
     stateAbbr: "NY",
@@ -962,7 +962,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── NORTH CAROLINA ───────────────────────────────────────────────────────
   {
-    slug: "ecu",
+    slug: "east-carolina-university-school-of-dental-medicine",
     abbr: "ECU",
     name: "East Carolina University School of Dental Medicine",
     stateAbbr: "NC",
@@ -985,7 +985,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "unc",
+    slug: "unc-adams-school-of-dentistry",
     abbr: "UNC",
     name: "University of North Carolina Chapel Hill, Adams School of Dentistry",
     stateAbbr: "NC",
@@ -1018,7 +1018,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── OHIO ─────────────────────────────────────────────────────────────────
   {
-    slug: "cwru",
+    slug: "case-western-reserve-university-school-of-dental-medicine",
     abbr: "CWRU",
     name: "Case Western Reserve University School of Dental Medicine",
     stateAbbr: "OH",
@@ -1036,7 +1036,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "osu",
+    slug: "ohio-state-university-college-of-dentistry",
     abbr: "OSU",
     name: "The Ohio State University College of Dentistry",
     stateAbbr: "OH",
@@ -1057,7 +1057,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── OKLAHOMA ─────────────────────────────────────────────────────────────
   {
-    slug: "ou",
+    slug: "university-of-oklahoma-college-of-dentistry",
     abbr: "OU",
     name: "University of Oklahoma College of Dentistry",
     stateAbbr: "OK",
@@ -1075,7 +1075,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── OREGON ───────────────────────────────────────────────────────────────
   {
-    slug: "ohsu",
+    slug: "oregon-health-sciences-university-school-of-dentistry",
     abbr: "OHSU",
     name: "Oregon Health Sciences University School of Dentistry",
     stateAbbr: "OR",
@@ -1093,7 +1093,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── PENNSYLVANIA ─────────────────────────────────────────────────────────
   {
-    slug: "pitt",
+    slug: "university-of-pittsburgh-school-of-dental-medicine",
     abbr: "Pitt",
     name: "University of Pittsburgh School of Dental Medicine",
     stateAbbr: "PA",
@@ -1111,7 +1111,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "temple",
+    slug: "temple-university-kornberg-school-of-dentistry",
     abbr: "Temple",
     name: "Temple University, Maurice H. Kornberg School of Dentistry",
     stateAbbr: "PA",
@@ -1128,7 +1128,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "upenn",
+    slug: "university-of-pennsylvania-school-of-dental-medicine",
     abbr: "UPenn",
     name: "University of Pennsylvania School of Dental Medicine",
     stateAbbr: "PA",
@@ -1152,7 +1152,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── PUERTO RICO ──────────────────────────────────────────────────────────
   {
-    slug: "upr",
+    slug: "university-of-puerto-rico-school-of-dental-medicine",
     abbr: "UPR",
     name: "University of Puerto Rico School of Dental Medicine",
     stateAbbr: "PR",
@@ -1170,7 +1170,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── SOUTH CAROLINA ───────────────────────────────────────────────────────
   {
-    slug: "musc",
+    slug: "medical-university-of-south-carolina-college-of-dental-medicine",
     abbr: "MUSC",
     name: "Medical University of South Carolina, James B. Edwards College of Dental Medicine",
     stateAbbr: "SC",
@@ -1190,7 +1190,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── TENNESSEE ────────────────────────────────────────────────────────────
   {
-    slug: "meharry",
+    slug: "meharry-medical-college-school-of-dentistry",
     abbr: "Meharry",
     name: "Meharry Medical College School of Dentistry",
     stateAbbr: "TN",
@@ -1208,7 +1208,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "uthsc",
+    slug: "university-of-tennessee-college-of-dentistry",
     abbr: "UT / UTHSC",
     name: "University of Tennessee Health Science Center College of Dentistry",
     stateAbbr: "TN",
@@ -1226,7 +1226,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── TEXAS ────────────────────────────────────────────────────────────────
   {
-    slug: "tamu",
+    slug: "texas-am-university-college-of-dentistry",
     abbr: "Texas A&M",
     name: "Texas A&M University College of Dentistry",
     stateAbbr: "TX",
@@ -1243,7 +1243,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "texas-tech",
+    slug: "texas-tech-university-woody-hunt-school-of-dentistry",
     abbr: "Texas Tech",
     name: "Texas Tech University Health Sciences Center El Paso, Woody L. Hunt School of Dentistry",
     stateAbbr: "TX",
@@ -1260,7 +1260,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "ut-h",
+    slug: "ut-houston-school-of-dentistry",
     abbr: "UT-H / UTHSC-H",
     name: "University of Texas Health Science Center at Houston School of Dentistry",
     stateAbbr: "TX",
@@ -1277,7 +1277,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "ut-sa",
+    slug: "ut-san-antonio-school-of-dentistry",
     abbr: "UT-SA / UTHSC-SA",
     name: "University of Texas Health Science Center at San Antonio School of Dentistry",
     stateAbbr: "TX",
@@ -1295,7 +1295,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── UTAH ─────────────────────────────────────────────────────────────────
   {
-    slug: "roseman",
+    slug: "roseman-university-college-of-dental-medicine",
     abbr: "Roseman",
     name: "Roseman University of Health Sciences College of Dental Medicine",
     stateAbbr: "UT",
@@ -1312,7 +1312,7 @@ export const schoolDetails: SchoolDetail[] = [
     ],
   },
   {
-    slug: "uofu",
+    slug: "university-of-utah-school-of-dentistry",
     abbr: "U of U",
     name: "University of Utah School of Dentistry",
     stateAbbr: "UT",
@@ -1335,7 +1335,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── VIRGINIA ─────────────────────────────────────────────────────────────
   {
-    slug: "vcu",
+    slug: "virginia-commonwealth-university-school-of-dentistry",
     abbr: "VCU",
     name: "Virginia Commonwealth University School of Dentistry",
     stateAbbr: "VA",
@@ -1354,7 +1354,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── WASHINGTON ───────────────────────────────────────────────────────────
   {
-    slug: "uw",
+    slug: "university-of-washington-school-of-dentistry",
     abbr: "UW",
     name: "University of Washington School of Dentistry",
     stateAbbr: "WA",
@@ -1377,7 +1377,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── WEST VIRGINIA ────────────────────────────────────────────────────────
   {
-    slug: "wvu",
+    slug: "west-virginia-university-school-of-dentistry",
     abbr: "WVU",
     name: "West Virginia University School of Dentistry",
     stateAbbr: "WV",
@@ -1395,7 +1395,7 @@ export const schoolDetails: SchoolDetail[] = [
   },
   // ── WISCONSIN ────────────────────────────────────────────────────────────
   {
-    slug: "marquette",
+    slug: "marquette-university-school-of-dentistry",
     abbr: "Marquette",
     name: "Marquette University School of Dentistry",
     stateAbbr: "WI",

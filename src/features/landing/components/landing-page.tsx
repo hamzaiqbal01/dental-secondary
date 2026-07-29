@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "./landing-page.module.css";
 import { ToothCanvas } from "./tooth-canvas";
 import { Navbar } from "@/shared/components/layout/navbar";
+import { Footer } from "@/shared/components/layout/footer";
 import { HeroSearch } from "./hero-search";
 import { NewsletterSection } from "@/shared/components/newsletter/newsletter-section";
 
@@ -193,57 +194,7 @@ export function LandingPage() {
 
       <NewsletterSection />
 
-      <footer className={styles.footer} id="contact">
-        <div className={styles.footerBrand}>
-          <div className={styles.logo}>
-            <div className={styles.logoIcon}>🦷</div>
-            Dental School Secondary
-          </div>
-          <p>The #1 platform helping pre-dental students navigate applications with confidence and clarity.</p>
-          <p className={styles.footerMini}>📧 dentalschoolsecondary@gmail.com</p>
-        </div>
-
-        <div className={styles.footerCol}>
-          <h4>Support</h4>
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Secondary Databases</a>
-            </li>
-            <li>
-              <a href="#">Application Services</a>
-            </li>
-            <li>
-              <a href="#">Other Resources</a>
-            </li>
-            <li>
-              <a href="#">Contact Us</a>
-            </li>
-          </ul>
-        </div>
-
-        <div className={styles.footerCol}>
-          <h4>Resources</h4>
-          <ul>
-            <li>
-              <a href="#">Blog</a>
-            </li>
-            <li>
-              <a href="#">DAT Prep</a>
-            </li>
-            <li>
-              <a href="#">Interview Tips</a>
-            </li>
-            <li>
-              <a href="#">FAQ</a>
-            </li>
-          </ul>
-        </div>
-      </footer>
-
-      <div className={styles.footerBottom}>© Dental School Secondary 2022 — All Rights Reserved</div>
+      <Footer />
     </div>
   );
 }
