@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { schoolDetails } from "@/features/database/data/school-details";
+import { blogPosts } from "@/features/blog/data/posts";
 
 const BASE_URL = "https://www.dentalschoolsecondary.com";
 
@@ -25,6 +26,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${BASE_URL}/blog`,
+      lastModified: LAST_UPDATED_HOME,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: `${BASE_URL}/resources`,
       lastModified: LAST_UPDATED_STATIC,
       changeFrequency: "monthly",
@@ -36,7 +43,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.5,
     },
+    {
+      url: `${BASE_URL}/privacy`,
+      lastModified: LAST_UPDATED_STATIC,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${BASE_URL}/terms`,
+      lastModified: LAST_UPDATED_STATIC,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
   ];
+
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: post.publishedAt,
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+  }));
 
   const schoolPages: MetadataRoute.Sitemap = schoolDetails.map((school) => ({
     url: `${BASE_URL}/database/${school.slug}`,
@@ -45,5 +71,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: school.questions.length > 0 ? 0.8 : 0.5,
   }));
 
-  return [...staticPages, ...schoolPages];
+  return [...staticPages, ...blogPages, ...schoolPages];
 }

@@ -27,10 +27,18 @@ export function Footer() {
         <div className={styles.footerCol}>
           <h4>Resources</h4>
           <ul>
-            <li><Link href="#">Blog</Link></li>
-            <li><Link href="#">DAT Prep</Link></li>
-            <li><Link href="#">Interview Tips</Link></li>
-            <li><Link href="#">FAQ</Link></li>
+            <li><Link href="/blog">Blog</Link></li>
+            <li><a href="https://www.bootcamp.com/dat" target="_blank" rel="noopener noreferrer">DAT Prep</a></li>
+            <li><Link href="/resources">Interview Tips</Link></li>
+            <li><Link href="/resources">FAQ</Link></li>
+          </ul>
+        </div>
+
+        <div className={styles.footerCol}>
+          <h4>Legal</h4>
+          <ul>
+            <li><Link href="/privacy">Privacy Policy</Link></li>
+            <li><Link href="/terms">Terms of Service</Link></li>
           </ul>
         </div>
       </footer>

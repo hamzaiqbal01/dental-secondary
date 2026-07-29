@@ -36,6 +36,17 @@ const URLS = [
   BASE + "/database",
   BASE + "/resources",
   BASE + "/contact",
+  BASE + "/blog",
+  BASE + "/privacy",
+  BASE + "/terms",
+
+  // Blog posts (SEO keyword-targeted)
+  BASE + "/blog/when-do-dental-schools-send-secondaries",
+  BASE + "/blog/nyu-dental-secondary-questions",
+  BASE + "/blog/ucla-dental-secondary-essays",
+  BASE + "/blog/usc-dental-secondary-questions",
+  BASE + "/blog/dental-school-secondary-application-cost",
+  BASE + "/blog/how-to-write-dental-school-secondary-essays",
 
   // School detail pages (40 with full content — indexed)
   BASE + "/database/university-of-alabama-school-of-dentistry",

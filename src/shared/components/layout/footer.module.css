@@ -2,8 +2,8 @@
   padding: 60px 8% 40px;
   border-top: 1px solid var(--border);
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
 }
 
 .footerBrand p {

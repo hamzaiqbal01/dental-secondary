@@ -69,6 +69,11 @@ const SLUG_REDIRECTS: Array<{ source: string; destination: string }> = [
   { source: "/database/uw",         destination: "/database/university-of-washington-school-of-dentistry" },
   { source: "/database/wvu",        destination: "/database/west-virginia-university-school-of-dentistry" },
   { source: "/database/marquette",  destination: "/database/marquette-university-school-of-dentistry" },
+  // Old generic blog slugs → new SEO keyword URLs
+  { source: "/blog/dental-school-secondary-application-timeline", destination: "/blog/when-do-dental-schools-send-secondaries" },
+  { source: "/blog/why-this-dental-school-secondary-essay-guide", destination: "/blog/how-to-write-dental-school-secondary-essays" },
+  { source: "/blog/dental-school-secondary-common-prompts-guide", destination: "/blog/how-to-write-dental-school-secondary-essays" },
+  { source: "/blog/dat-prep-and-secondary-application-balance", destination: "/blog/dental-school-secondary-application-cost" },
 ];
 
 const nextConfig: NextConfig = {
