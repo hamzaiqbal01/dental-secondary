@@ -122,8 +122,6 @@
 /* ─── MAIN LAYOUT ─── */
 .main {
   padding: 64px 8% 100px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 .layout {
   display: grid;
